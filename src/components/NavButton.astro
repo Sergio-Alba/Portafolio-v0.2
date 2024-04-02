@@ -1,0 +1,11 @@
+---
+interface Props{
+  url:string,
+  title:string,
+}
+const {url,title} = Astro.props
+---
+<a href={url} class="group p-2 relative flex flex-col items-center hover:scale-[1.7] scale-[1.4] transition-colors ease-in-out delay-200 hover:text-teal-500">
+  <slot />
+  <span class="opacity-0  group-hover:opacity-100 group-hover:-translate-y-6 bg-gray-700 text-white p-1 absolute text-[7px]">{title}</span>
+</a>

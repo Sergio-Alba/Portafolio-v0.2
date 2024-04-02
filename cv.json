@@ -3,7 +3,7 @@
   "basics": {
     "name": "Sergio Andres Alba",
     "label": "Full Stack Developer ",
-    "image": "/me.webp",
+    "image": "/kail.jpg",
     "email": "sergioalba.1099@gmail.com",
     "phone": "+591 78958669",
     "url": "https://midu.dev",
@@ -11,7 +11,7 @@
     "location": {
       "address": "",
       "postalCode": "0000",
-      "city": "el Prat de Llobregat",
+      "city": "La paz",
       "countryCode": "ES",
       "region": "Bolivia"
     },
@@ -28,7 +28,7 @@
       },
       {
         "network": "GitHub",
-        "username": "Sergio-Alba",
+        "username": "Sergio Alba",
         "url": "https://github.com/Sergio-Alba"
       }
     ]

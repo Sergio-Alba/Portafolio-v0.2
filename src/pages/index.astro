@@ -1,7 +1,12 @@
 ---
+import { basics } from '@cv';
 import Layout from '../layouts/Layout.astro';
+const {name, label } = basics
 ---
 
-<Layout title="Protafolio Sergio Alba">
-	
+<Layout title= `Portafolio de ${name} ${label}`>
+  <section class=" w-10/12 min-h-min bg-purple-400 ">
+    <h2>hola Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam asperiores enim corrupti perspiciatis ad hic, sequi, modi aut explicabo facere, voluptatum ipsam quod minus nulla! Corporis veniam consequatur asperiores optio placeat hic maxime qui. Nam ab soluta facilis libero, voluptates qui quidem delectus cum dolorum ipsam omnis consectetur? Blanditiis, qui?</h2>
+    <slot/>
+  </section>
 </Layout>

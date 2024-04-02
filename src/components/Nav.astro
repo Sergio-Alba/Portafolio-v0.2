@@ -1,0 +1,22 @@
+---
+import Article from "@/icons/article.astro";
+import User from "@/icons/user.astro";
+import NavButton from "./NavButton.astro";
+import Briefcase from "@/icons/briefcase.astro";
+
+// import { Basics } from "@/cv";
+---
+
+<nav class=" w-4/6 h-12 bg-white bottom-16 fixed rounded-2xl flex items-center justify-evenly">
+  <NavButton url="/About/" title="About">
+    <Article />
+  </NavButton>
+  <NavButton url="/Projects/" title="Projects">
+    <Briefcase/>
+  </NavButton>
+  <NavButton url="/Contact/" title="Contact">
+    <User/>
+  </NavButton>
+</nav>
+
+
