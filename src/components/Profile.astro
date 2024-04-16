@@ -2,13 +2,11 @@
 import { basics } from "@cv";
 import LinkedIn from "@/icons/linkedin.astro";
 import X from "@/icons/x.astro"
-import GitHub from "@/icons/github.astro";
-import World from "@/icons/world.astro"
+import GitHub from "@/icons/skills/github.astro";
 import type { SocialIcon } from '@/img'
 import Download from "@/icons/download.astro";
 
-const { name, label, image , location, profiles} = basics
-const { city, region} = location
+const { name, label, image , profiles} = basics
 const SOCIAL_ICONS:SocialIcon = {
   GitHub,
   LinkedIn,
@@ -17,35 +15,34 @@ const SOCIAL_ICONS:SocialIcon = {
 
 ---
 
-<section class="w-4/5 max-w-80 min-h-min bg-gray-100 dark:bg-slate-800 rounded-2xl relative flex flex-col justify-end items-center text-gray-800 dark:text-white" >
+<section class="w-4/5 max-w-80 min-h-min mt-28 bg-gray-100 dark:bg-slate-800 rounded-2xl relative flex flex-col justify-end items-center text-gray-800 dark:text-white" >
   <img class="absolute w-4/6 max-w-60 top-[-5rem] rounded-xl shadow-3xl" src={image} alt={name}>
-  <div class="mt-40 flex flex-col items-center gap-4">
-    <h1 class="font-bold text-2xl">{name}</h1>
-    <h2 class="">{label}</h2>
-    <h4 class="text-xs flex gap-2">
-      <World/>
-      {city} - {region}
-    </h4>
-    <div class="w-full my-8 flex justify-center items-center gap-4">
+  <div class="mt-40 flex flex-col  items-center ">
+    <h1 class="font-bold text-3xl w-full text-center">{name}</h1>
+    <h2 class=" text-sky-400 text-ms">{label}</h2>
+    <div class="w-full my-8 flex flex-col justify-center items-center gap-4">
       {
           profiles.map(({ network, url, username }) => {
             const Icon:string = SOCIAL_ICONS[network]
             return (
               <a
-                class={`${network} fondo }`}
+                class={`${network} w-3/5 flex items-center gap-4 hover:scale-105`}
                 href={url}
                 title={`Visitar el perfil de ${username} en ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon />
+                <span class="fondo">
+                  <Icon />
+                </span>
+                {network}
               </a>
             )
           })
       }
     </div>
     <div class="my-4 p-4">
-      <a class="bg-sky-400 px-6 py-3 rounded-lg shadow-md flex gap-2 hover:scale-105 active:shadow-[inset_10px_10px_15px_-3px_#00000020] active:text-slate-700 " href="https://drive.google.com/file/d/12uCQzkQrNeMiCkPKlgPBexKTn2odNq1M/view?usp=drive_link" download="CV Sergio Alba"><Download/> Descargar CV</a>
+      <a class="bg-sky-400 font-light text-center px-6 py-3 rounded-lg shadow-md flex gap-2 hover:scale-105 active:shadow-[inset_10px_10px_15px_-3px_#00000020] text-white " href="https://drive.google.com/file/d/12uCQzkQrNeMiCkPKlgPBexKTn2odNq1M/view?usp=drive_link" download="CV Sergio Alba"><Download/> Descargar CV</a>
     </div>
   </div> 
 </section>
@@ -63,7 +60,7 @@ const SOCIAL_ICONS:SocialIcon = {
     transition: color 100ms ease-in;
   }
   .fondo{
-    @apply bg-white/10 px-4 py-2 rounded-lg shadow-lg dark:shadow-xl hover:scale-105
+    @apply inline-block bg-white/10  px-4 py-2 rounded-lg shadow-lg dark:shadow-xl 
   }
 </style>
 
