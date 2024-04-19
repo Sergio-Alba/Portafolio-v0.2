@@ -1,0 +1,60 @@
+---
+import type { any, string } from 'astro/zod'
+
+interface Props{
+  title:string,
+  url:string,
+  description:string,
+  image:string|any,
+}
+const { title, url, description, image } = Astro.props;
+---
+
+<article class="card w-60 h-40  overflow-hidden">
+  <section class="card-contend h-full relative shadow-lg  ">
+    <img 
+      src={image} 
+      alt=`imagen de ${title}`
+      class="absolute w-full object-contain">
+    <div class="card-front w-full flex justify-center items-center gap-4 shadow-lg">
+      <h1 class="translateZ w-4/5 text-wrap  text-3xl text-yellow-500 font-black text-center">{title}</h1>
+      
+    </div>
+    <div class="card-back flex justify-center items-center ">
+      <p class="translateZ w-full p-4 text-white  font-light text-xs  ">{description}</p>
+      <a 
+        class="translateZ w-16 h-8 text-center text-white bg-sky-500 rounded-lg"
+        href={url} 
+        target="_blank" 
+        rel="noopener noreferrer">
+        Ver
+      </a>
+    </div>
+  </section>
+</article>
+<style>
+  .card-contend {
+    transform-style: preserve-3d;
+    transition: transform 3s;
+  }
+  .card:hover  .card-contend {
+    transform: rotateY(180deg);
+  }
+  .card-front,
+  .card-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* backface-visibility: hidden; */
+    transform-style: preserve-3d;
+  }
+
+  .card-back {
+    transform: rotateY(180deg);
+  }
+  .translateZ {
+    transform: translateZ(1rem);
+  }
+</style>

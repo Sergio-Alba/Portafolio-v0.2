@@ -1,0 +1,28 @@
+---
+import { work  } from "@cv";
+import File from "@/icons/file.astro";
+import Titles from "../Titles.astro";
+import ArticleExp from "../ArticleExp.astro"
+interface Props{
+  id:string,
+}
+const {id} = Astro.props
+
+---
+<section class="" id={id} >
+  <Titles url="experiencia" title="Experiencia">
+    <File Class="text-purple-500 size-7"/>
+  </Titles>
+  <div class="w-full  my-6 flex flex-col ">
+    {
+      work.map(({name,position,url,endDate,summary,highlights})=>{
+        return(
+          <ArticleExp name={name} company={highlights} date={endDate} summary={summary} />
+        )
+      })
+    }
+  </div>
+  <div class="  ">
+
+  </div>
+</section>

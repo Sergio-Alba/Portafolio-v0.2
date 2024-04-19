@@ -1,0 +1,25 @@
+---
+import { projects } from "@cv"
+import Briefcase from "@/icons/briefcase.astro";
+import Titles from "../Titles.astro";
+import Card from "../Card.astro"
+interface Props{
+  id:string
+}
+const {id} = Astro.props
+---
+<section class="my-4" id={id}>
+  <Titles url="projects" title="Proyecto">
+      <Briefcase Class="text-sky-500 size-7"/>
+  </Titles> 
+  <div class="py-8 flex flex-wrap justify-center items-center gap-4">
+    {
+      projects.slice(0,3).map(({name, description,url,image})=>{
+        return(
+          <Card title={name} description={description} url={url} image={image} />
+        )
+      })   
+    } 
+  </div>
+</section> 
+

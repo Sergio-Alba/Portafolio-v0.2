@@ -3,11 +3,11 @@ import { basics } from "@cv";
 import LinkedIn from "@/icons/linkedin.astro";
 import X from "@/icons/x.astro"
 import GitHub from "@/icons/skills/github.astro";
-import type { SocialIcon } from '@/img'
+import type { Icons } from '@/img'
 import Download from "@/icons/download.astro";
 
 const { name, label, image , profiles} = basics
-const SOCIAL_ICONS:SocialIcon = {
+const SOCIAL_ICONS:Icons = {
   GitHub,
   LinkedIn,
   X,
@@ -15,25 +15,25 @@ const SOCIAL_ICONS:SocialIcon = {
 
 ---
 
-<section class="w-4/5 max-w-80 min-h-min mt-28 bg-gray-100 dark:bg-slate-800 rounded-2xl relative flex flex-col justify-end items-center text-gray-800 dark:text-white" >
-  <img class="absolute w-4/6 max-w-60 top-[-5rem] rounded-xl shadow-3xl" src={image} alt={name}>
-  <div class="mt-40 flex flex-col  items-center ">
-    <h1 class="font-bold text-3xl w-full text-center">{name}</h1>
-    <h2 class=" text-sky-400 text-ms">{label}</h2>
-    <div class="w-full my-8 flex flex-col justify-center items-center gap-4">
+<section class="w-4/5 lg:w-80  min-h-min  bg-white/80 dark:bg-slate-800 rounded-2xl relative flex flex-col justify-center items-center text-gray-800 dark:text-white  lg:sticky lg:top-24 " > 
+  <img class="relative  w-4/6 max-w-64 bottom-8  rounded-xl shadow-3xl" src={image} alt={name}>
+  <div class=" flex flex-col  items-center gap-4 ">
+    <h1 class="font-extrabold text-4xl w-full text-center">{name}</h1>
+    <h2 class=" text-sky-400 text-lg">{label}</h2>
+    <div class="w-3/4 my-4 flex justify-center flex-wrap items-center gap-4 ">
       {
           profiles.map(({ network, url, username }) => {
-            const Icon:string = SOCIAL_ICONS[network]
+            const Icon = SOCIAL_ICONS[network]
             return (
               <a
-                class={`${network} w-3/5 flex items-center gap-4 hover:scale-105`}
+                class={`${network} w-40 text-lg flex items-center gap-4 hover:scale-105`}
                 href={url}
                 title={`Visitar el perfil de ${username} en ${network}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span class="fondo">
-                  <Icon />
+                  <Icon/>
                 </span>
                 {network}
               </a>
@@ -41,7 +41,7 @@ const SOCIAL_ICONS:SocialIcon = {
           })
       }
     </div>
-    <div class="my-4 p-4">
+    <div class="mb-8 ">
       <a class="bg-sky-400 font-light text-center px-6 py-3 rounded-lg shadow-md flex gap-2 hover:scale-105 active:shadow-[inset_10px_10px_15px_-3px_#00000020] text-white " href="https://drive.google.com/file/d/12uCQzkQrNeMiCkPKlgPBexKTn2odNq1M/view?usp=drive_link" download="CV Sergio Alba"><Download/> Descargar CV</a>
     </div>
   </div> 

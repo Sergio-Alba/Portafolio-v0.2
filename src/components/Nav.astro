@@ -1,22 +1,29 @@
 ---
-import Article from "@/icons/article.astro";
-import User from "@/icons/user.astro";
 import NavButton from "./NavButton.astro";
 import Briefcase from "@/icons/briefcase.astro";
+import Mail from "@/icons/mail.astro";
+import File from "@/icons/file.astro";
+import AboutIcon from "@/icons/aboutIcon.astro";
+import BtnTheme from "@/components/BtnTheme.astro"
 
 // import { Basics } from "@/cv";
 ---
 
-<nav class=" w-4/6 h-12 bg-white bottom-16 fixed rounded-2xl flex items-center justify-evenly">
-  <NavButton url="/About/" title="About">
-    <Article />
+<nav class=" w-4/6 md:w-2/5 h-20 bg-white dark:bg-gray-700 bottom-6 fixed rounded-2xl flex items-center justify-evenly lg:relative lg:flex-col lg:w-24 lg:h-4/6">
+  
+  <NavButton url="/#about" title="About">
+    <AboutIcon Class="" />
   </NavButton>
-  <NavButton url="/Projects/" title="Projects">
-    <Briefcase/>
+  <NavButton url="/#projects" title="Projects">
+    <Briefcase Class=""/>
   </NavButton>
-  <NavButton url="/Contact/" title="Contact">
-    <User/>
+  <NavButton url="/#experiens" title="Experiens">
+    <File Class=""/>
   </NavButton>
+  <NavButton url="mailto:elintruso.n1@gmail.com" title="Contact">
+    <Mail Class=""/>
+  </NavButton>
+  <BtnTheme/>
 </nav>
 
 
