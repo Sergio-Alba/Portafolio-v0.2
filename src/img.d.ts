@@ -1,1 +1,1 @@
-export type SocialIcon = Record<string, string | any>
+export type Icons = Record<string, string | any>
