@@ -5,7 +5,7 @@ interface Props{
 }
 const {url,title} = Astro.props
 ---
-<a href={url} class="group p-1 shadow-md relative flex flex-col items-center justify-center hover:scale-[1.7] scale-[1.4] transition-colors ease-in-out text-gray-5 00  hover:text-teal-500 size-8 rounded-full" >
-  <slot />
-  <span class="opacity-0  group-hover:opacity-100 group-hover:-translate-y-6 group-focus:-translate-y-6 bg-gray-700 text-white p-1 absolute text-[7px]">{title}</span>
+<a href={url} class="w-3/4 inline-block  border-b px-4 py-4 shadow-xl hover:scale-[1.1]
+transition-colors ease-in-out text-gray-5  hover:text-teal-500 font-medium text-2xl" >
+  {title}
 </a>
