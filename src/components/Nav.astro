@@ -8,11 +8,10 @@ interface Props{
 const { estilos } = Astro.props
 ---
 
-<nav class=` ${estilos} w-[18rem] h-[35rem]  max-h-[0] overflow-hidden px-6 absolute -right-4 bottom-[5rem] bg-gray-900 flex flex-col justify-center  gap-4 rounded-md transition-all duration-700 ease-in-out `>
-  
+<nav  class=` ${estilos}  w-[15rem] h-[35rem]  max-h-[0] overflow-hidden lg:overflow-visible px-6 absolute  right-0  dark:bg-gray-100/10  backdrop-blur-md bg-gray-300/60 flex flex-col justify-center  gap-4 rounded-md transition-all duration-700 ease-in-out lg:max-h-40 lg:relative lg:flex-row lg:h-max  lg:w-max lg:dark:bg-none lg:bg-transparent lg:dark:bg-transparent`>
   <NavButton url="/#about" title="About"/>
   <NavButton url="/#projects" title="Projects"/>
   <NavButton url="/#experiens" title="Experiens"/>
   <NavButton url="mailto:elintruso.n1@gmail.com" title="Contact"/>
   <BtnTheme/>
-</nav>
+</nav>   

@@ -3,15 +3,16 @@ import Nav from "./Nav.astro";
 
 
 ---
-<div class=" fixed bg-gray-500 border rounded-2xl top-[50rem] right-4 z-50 ">
+<div class="appearance-none  bg-gray-400/30 lg:bg-transparent rounded-md top-[50rem] right-4 z-50 ">
   <input 
-    class="hidden peer/hamb"
+    class="hidden peer/hamb " 
     type="checkbox" 
     id="hamb">
-  <label for="hamb" class="w-16 h-16   flex flex-col justify-evenly items-center">
-    <span class="w-10 h-1 bg-white inline-block"></span>
-    <span class="w-12 h-1 bg-white inline-block"></span>
-    <span class="w-10 h-1 bg-white inline-block"></span>
+  <label for="hamb" class="w-14 h-14 lg:bg-transparent lg:hidden  flex flex-col justify-evenly items-center">
+    <span class="w-8 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"></span>
+    <span class="w-12 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"></span>
+    <span class="w-8 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"></span>
   </label>
-  <Nav estilos="peer-checked/hamb:max-h-[33rem] "/> 
-</div> 
+  <Nav estilos="peer-checked/hamb:max-h-[30rem]   "/> 
+
+</div>  
