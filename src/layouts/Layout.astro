@@ -1,6 +1,4 @@
 ---
-import Profile from '@/components/Profile.astro';
-import Nav from '@/components/Nav.astro';
 import Header from '@/components/Header.astro';
 
 interface Props {
@@ -20,8 +18,8 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class=" bg-sky-50  dark:bg-gray-950  dark:text-gray-300 font-jetBrains ">
-		<Header url='./Logo.webp' name='logo SA'/>
+	<body class="container w-screen mx-auto bg-sky-50  dark:bg-gray-950  dark:text-gray-300 font-jetBrains ">
+		<Header logo='</Sergio>'/>
 		<slot/>
 	</body>
 </html>
@@ -30,5 +28,24 @@ const { title } = Astro.props;
 	*{
 		font-family: "JetBrains Mono", monospace;
 	}
-	
+.container {
+
+  --gap: 8em;
+  --line: 1px;
+  --color: rgba(86, 179, 255, 0.193);
+
+  background-image: linear-gradient(
+      -90deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    ),
+    linear-gradient(
+      0deg,
+      transparent calc(var(--gap) - var(--line)),
+      var(--color) calc(var(--gap) - var(--line) + 1px),
+      var(--color) var(--gap)
+    );
+  background-size: var(--gap) var(--gap);
+}
 </style>
