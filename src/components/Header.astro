@@ -2,17 +2,22 @@
 import Hamburger from "@/components/Hamburger.astro"
 
 interface Props{
-  url:string,
-  name:string,
+  logo:string,
 }
-const {url,name} = Astro.props;
+const {logo} = Astro.props;
 ---
-<div class=" z-50 w-full h-24 border-b flex justify-center items-center">
-
+<div class=" w-full h-28 px-6 relative flex justify-between lg:justify-around items-center">
+  <a href="#" class=" text-3xl font-bold bg-[length:200%] bg-gradient-to-r from-purple-400 via-cyan-300 to-purple-400 animate-bg_slow text-transparent bg-clip-text ">
+    {logo}
+  </a>
   <Hamburger/>
-  <img 
-    class="h-5/6"
-    src={url} 
-    alt={name}>
-  
 </div>
+<style is:global>
+  @keyframes bg {
+    to{
+      background-position: 200% center;
+    }
+  }
+</style>
+
+

@@ -2,17 +2,15 @@
 import { basics } from '@cv';
 import Layout from '../layouts/Layout.astro';
 import About from '@/components/sections/About.astro';
-import Skills from '@/components/sections/Skills.astro';
 import Projects from '@/components/sections/Projects.astro';
 import Experiens from '@/components/sections/Experiens.astro';
 import Presentation from '@/components/Presentation.astro';
 const {name, label } = basics
 ---
 
-<Layout title= `Portafolio de ${name} ${label}`>
+<Layout title= `${name} ${label}`>
   <Presentation/>
   <About id='about'/>
-  <Skills/>
   <Projects id='projects'/>
   <Experiens id='experiens'/>
 </Layout>

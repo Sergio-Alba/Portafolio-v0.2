@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Sergio Andres Alba",
-    "label": "Full Stack Developer ",
+    "label": "FrontEnd Developer ",
     "image": "/kail.jpg",
     "email": "sergioalba.1099@gmail.com",
     "phone": "+591 78958669",
@@ -19,11 +19,6 @@
         "network": "LinkedIn",
         "username": "Sergio Alba",
         "url": "https://www.linkedin.com/in/sergio-alba"
-      },
-      {
-        "network": "X",
-        "username": "Sergio Andres Alba",
-        "url": "https://x.com/midudev"
       },
       {
         "network": "GitHub",
@@ -194,6 +189,14 @@
         "Código Fuente",
         "Git"
       ]
+    }
+  ],
+  "soft_skills": [
+    {
+      "soft": "Buena Comunicación"
+    },
+    {
+      "soft": "Puntualidad"
     }
   ],
   "languages": [

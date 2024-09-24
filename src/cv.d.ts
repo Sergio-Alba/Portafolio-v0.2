@@ -7,6 +7,7 @@ export interface CV {
   certificates: Array<Certificates>
   publications: Array<Publications>
   skills: Array<Skills>
+  soft_skills: Array<Soft_Skills>
   languages: Array<Languages>
   interests: Array<Interests>
   references: Array<References>
@@ -65,6 +66,10 @@ interface Skills {
   name: string
   level: string
   keywords: Array<string>
+}
+
+interface Soft_Skills {
+  soft: string
 }
 
 interface Awards {

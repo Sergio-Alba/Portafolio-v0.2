@@ -6,22 +6,22 @@ import SystemIcon from "@/icons/SystemIcon.astro";
 const THEMES = ["Light", "Dark", "System"];
 ---
 
-<div class="relative z-10 top-4 lg:top-2 lg:-right-6">
+<div class="relative z-10 top-4 md:top-2 md:-right-6">
   <button
     id="theme-toggle-btn"
-    class="appearance-none w-16 h-16 bg-gray-500/30 dark:bg-gray-100/10  border-none flex items-center justify-center rounded-full lg:relative lg:w-10 lg:h-10"
+    class="appearance-none w-16 h-16 bg-gray-500/30 dark:bg-gray-100/10  border-none flex items-center justify-center rounded-full md:relative md:w-10 md:h-10"
   >
     <span class="sr-only">Elige el tema</span>
-    <Sun id="light" class="theme-toggle-icon lg:size-6 transition-all text-yellow-400" />
-    <Moon id="dark" class="theme-toggle-icon lg:size-6  absolute  transition-all text-sky-500" />
+    <Sun id="light" class="theme-toggle-icon md:size-6 transition-all text-yellow-400" />
+    <Moon id="dark" class="theme-toggle-icon md:size-6  absolute  transition-all text-sky-500" />
     <SystemIcon
       id="system"
-      class="theme-toggle-icon lg:size-6 absolute  transition-all text-cyan-800"
+      class="theme-toggle-icon md:size-6 absolute  transition-all text-cyan-800"
     />
   </button>
   <div 
     id="themes-menu"
-    class="absolute hidden h-max scale-80 -bottom-5 -right-2 lg:top-12 lg:left-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/50 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
+    class="absolute hidden h-max scale-80 -bottom-5 -right-2 md:top-12 md:right-0 lg:left-0 text-sm p-1 min-w-[8rem] rounded-md border border-gray-100 bg-white/90 dark:bg-gray-900/50 dark:border-gray-500/20 shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-md"
   >
     <ul>
       {
