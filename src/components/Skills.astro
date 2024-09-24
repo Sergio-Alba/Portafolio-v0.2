@@ -1,0 +1,59 @@
+---
+import { skills } from "../../cv.json"
+import type {Icons} from "../img";
+import Code from "../icons/code.astro"
+import Sass from "../icons/skills/sass.astro"
+import Html from "../icons/skills/html.astro"
+import Css from "../icons/skills/css.astro"
+import JavaScript from "../icons/skills/javascript.astro"
+import Tailwind from "../icons/skills/tailwind.astro"
+import TypeScript from "../icons/skills/typescript.astro"
+import React from "../icons/skills/react.astro"
+import Astr from "../icons/skills/astr.astro"
+import Next from "../icons/skills/nextjs.astro"
+import Node from "../icons/skills/nodejs.astro"
+import Java from "../icons/skills/java.astro"
+import Spring from "../icons/skills/spring.astro"
+import Sql from "../icons/skills/sql.astro"
+import PostgresQl from "../icons/skills/postgresql.astro"
+import Git from "../icons/skills/git.astro"
+import GitHub from "../icons/skills/github.astro"
+import Titles from "./Titles.astro"
+const SKILLS_ICONS: Icons= {
+  Html,
+  Css,
+  Sass,
+  Tailwind,
+  JavaScript,
+  TypeScript,
+  React,
+  Astr,
+  Next,
+  Node,
+  Java,
+  Spring,
+  Sql,
+  PostgresQl,
+  Git,
+  GitHub
+}
+---
+<section class="">
+  <Titles url="Habilidades" title="Skills">
+    <!-- <Code Class="text-purple-500 size-7"/> -->
+  </Titles>
+    <ul class=" w-full py-6 flex flex-wrap gap-2 ">
+    {
+      skills.map(({name}) => {
+        const iconName = name === "Astro" ? "Astr" : name
+        const Icon = SKILLS_ICONS[iconName];
+        return ( 
+            <li class=" w-max py-1 px-2 flex gap-1 border dark:border-white rounded-md font-light text-md   select-none">
+              {Icon && <Icon class="size-6 " />} <span>{name}</span>
+            </li>
+          )
+        }
+      )
+    }
+  </ul>
+</section> 

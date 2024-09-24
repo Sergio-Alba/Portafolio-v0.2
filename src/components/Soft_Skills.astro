@@ -1,0 +1,16 @@
+---
+import Titles from "@/components/Titles.astro";
+import { soft_skills } from "@cv";
+
+---
+<section class="mb-8 ">
+  <Titles url="" title="Soft Skills"/>
+  
+  <ul class="my-4">
+    {
+      soft_skills.map(({soft})=> 
+      <li> - {soft}</li>
+    )
+    }
+  </ul>
+</section> 
