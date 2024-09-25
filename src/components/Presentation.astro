@@ -13,13 +13,13 @@ const SOCIAL_ICONS:Icons = {
 
 
 ---
-<section class="w-full h-[90vh]  py-8 px-4 bac lg:mx-auto lg:flex lg:items-center lg:justify-evenly  ">
-  <img src="./darth_vader-removebg-preview.png" alt="" class="img-profile mb-6 ">
-  <div class="flex flex-col items-center  gap-5">
-    <h1 class="  text-center text-purple-500 text-xl ">Front-end Developer</h1>
-    <h2 class="text-2xl text-center first-letter:text-sky-600 first-letter:text-3xl first-letter:font-bold lg:text-3xl lg:first-letter:text-4xl">
+<section class=" lg:w-[80%] lg:h-screen  mx-auto py-8 px-4 flex flex-col items-center lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-evenly  ">
+  <img src="./darth_vader-removebg-preview.png" alt="" class="img-profile mb-6 w-72 lg:w-2/5">
+  <div class=" flex flex-col items-center justify-around gap-5 lg:w-3/5">
+    <h1 class="text-center text-purple-500 text-2xl lg:text-3xl ">Front-end Developer</h1>
+    <h2 class="text-3xl text-center first-letter:text-sky-600 first-letter:text-4xl first-letter:font-bold lg:text-5xl lg:first-letter:text-7xl">
       Bienvenido a mi portafolio <br>
-      <span class="text-base ">Me llamo Sergio puedes contactarme atravez de mis redes.</span>
+      <span class=" inline-block text-base my-6 ">Me llamo Sergio puedes contactarme atravez de mis redes.</span>
     </h2>
     <section class="flex flex-col gap-4  ">
       <div class="flex justify-center items-center gap-3 ">
@@ -34,13 +34,13 @@ const SOCIAL_ICONS:Icons = {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                  <Icon class="size-12"/>
+                  <Icon class={`${network=="LinkedIn" ?'hover:text-sky-500':'hover:text-orange-400'} size-12 lg:size-16`}/>
               </a>
             )
           })
       }
       </div>
-      <a class="bg-gradient-to-r from-green-400/75 to-blue-500/75 hover:from-green-400 hover:to-blue-400 transition-all text-xl text-center px-8 py-5  rounded-lg shadow-md flex gap-2 hover:scale-105 active:shadow-[inset_10px_10px_15px_-3px_#00000020] text-white " href="https://drive.google.com/file/d/12uCQzkQrNeMiCkPKlgPBexKTn2odNq1M/view?usp=drive_link" download="CV Sergio Alba"><Download/> Descargar CV</a>
+      <a class="bg-gradient-to-r from-green-400/75 to-blue-500/75 hover:from-green-400 hover:to-blue-400 hover:shadow-[0px_0px_20px_5px_#ffffff70] transition-all text-xl text-center px-8 py-5 rounded-lg flex gap-2 hover:scale-105 active:shadow-[inset_10px_10px_15px_-3px_#00020] text-white" href="https://drive.google.com/file/d/12uCQzkQrNeMiCkPKlgPBexKTn2odNq1M/view?usp=drive_link" download="CV Sergio Alba" title="Descargar CV"><Download/> Descargar CV</a>
     </section>
   </div>
 </section>
