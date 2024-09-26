@@ -9,6 +9,9 @@ export default {
 			},
 			animation:{
 				bg_slow:'bg 4s linear infinite',
+			},
+			backgroundImage:{
+				circles:"url('./src/icons/fondo-5.png')"
 			}
 		},
 	},
