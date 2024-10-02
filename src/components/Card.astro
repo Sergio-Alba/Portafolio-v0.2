@@ -1,5 +1,5 @@
 ---
-import type { any, string } from 'astro/zod'
+// import type { any, string } from 'astro/zod'
 
 interface Props{
   title:string,
@@ -10,8 +10,8 @@ interface Props{
 const { title, url, description, image } = Astro.props;
 ---
 
-<article class="card w-60 h-40  overflow-hidden">
-  <section class="card-contend h-full relative shadow-lg  ">
+<article class="card w-60 h-40  overflow-hidden -z-0">
+  <section class="card-contend h-full relative shadow-lg -z-0  ">
     <img 
       src={image} 
       alt=`imagen de ${title}`

@@ -1,29 +1,17 @@
 ---
 import NavButton from "./NavButton.astro";
-import Briefcase from "@/icons/briefcase.astro";
-import Mail from "@/icons/mail.astro";
-import File from "@/icons/file.astro";
-import AboutIcon from "@/icons/aboutIcon.astro";
-import BtnTheme from "@/components/BtnTheme.astro"
+import BtnTheme from "../components/BtnTheme.astro"
 
-// import { Basics } from "@/cv";
+interface Props{
+  estilos:string
+}
+const { estilos } = Astro.props
 ---
 
-<nav class=" w-4/6 md:w-2/5 h-20 bg-white dark:bg-gray-700 bottom-6 fixed rounded-2xl flex items-center justify-evenly lg:relative lg:flex-col lg:w-24 lg:h-4/6">
-  
-  <NavButton url="/#about" title="About">
-    <AboutIcon Class="" />
-  </NavButton>
-  <NavButton url="/#projects" title="Projects">
-    <Briefcase Class=""/>
-  </NavButton>
-  <NavButton url="/#experiens" title="Experiens">
-    <File Class=""/>
-  </NavButton>
-  <NavButton url="mailto:elintruso.n1@gmail.com" title="Contact">
-    <Mail Class=""/>
-  </NavButton>
+<nav  class=` ${estilos}  w-[15rem] h-[35rem]  max-h-[0] overflow-hidden md:overflow-visible px-6 absolute top-28 md:top-0 right-0  dark:bg-black/30  backdrop-blur-xl md:backdrop-blur-none bg-gray-200/20 flex flex-col justify-center gap-4 rounded-md transition-all duration-700 ease-in-out md:max-h-40 md:relative md:flex-row md:h-max  md:w-max md:dark:bg-none md:bg-transparent md:dark:bg-transparent`> 
+  <NavButton url="/#about" title="About"/>
+  <NavButton url="/#projects" title="Projects"/>
+  <NavButton url="/#experiens" title="Experiens"/>
+  <NavButton url="mailto:elintruso.n1@gmail.com" title="Contact"/>
   <BtnTheme/>
-</nav>
-
-
+</nav>   

@@ -6,6 +6,12 @@ export default {
 		extend: {
 			fontFamily:{
 				jetBrains:["JetBrains Mono", "monospace"]
+			},
+			animation:{
+				bg_slow:'bg 4s linear infinite',
+			},
+			backgroundImage:{
+				circles:"url('./src/icons/fondo-5.png')"
 			}
 		},
 	},

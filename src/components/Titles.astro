@@ -5,6 +5,13 @@ interface Props {
 }
 const { url,title } = Astro.props;
 ---
-<a href={url} class="dark:text-white font-bold text-xl  select-none pointer-events-none px-1 py-4 flex gap-2 border-b border-black dark:border-white  ">
+<a href={url} class=" font-bold text-xl  select-none pointer-events-none px-1 py-4 flex gap-2 border-b border-black dark:border-white z-0 bg-[length:200%] bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 animate-bg_slow text-transparent bg-clip-text  ">
   <slot/> {title}<a></a>
 </a>
+<style>
+  @keyframes bg {
+    to{
+      background-position: 200% center;
+    }
+  }
+</style>
