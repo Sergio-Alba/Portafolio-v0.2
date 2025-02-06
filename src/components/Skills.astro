@@ -38,18 +38,14 @@ const SKILLS_ICONS: Icons= {
   GitHub
 }
 ---
-<section class="">
-  <Titles url="Habilidades" title="Skills">
-    <!-- <Code Class="text-purple-500 size-7"/> -->
-  </Titles>
-    <ul class=" w-full py-6 flex flex-wrap gap-2 ">
-    {
-      skills.map(({name}) => {
+<section class="overflow-hidden  ">
+    <ul class="flex gap-16 py-4 skill ">
+    { [...skills,...skills].map(({name}) => {
         const iconName = name === "Astro" ? "Astr" : name
         const Icon = SKILLS_ICONS[iconName];
         return ( 
-            <li class=" w-max py-1 px-2 flex gap-1 border dark:border-white rounded-md font-light text-md   select-none">
-              {Icon && <Icon class="size-6 " />} <span>{name}</span>
+            <li class="">
+              {Icon && <Icon class="size-16 "/>} 
             </li>
           )
         }
@@ -57,3 +53,19 @@ const SKILLS_ICONS: Icons= {
     }
   </ul>
 </section> 
+<style>
+  @keyframes infinite-scroll {
+    0% {
+      transform:translateX(0)
+    } 
+    100% {
+      transform: translateX(calc(-50% - 20px))
+    }
+  }
+  .skill {
+    animation: infinite-scroll 40s linear infinite;
+  }section {
+    mask:linear-gradient(90deg, transparent, white 20%, white 70%, transparent);
+  }
+  
+</style>

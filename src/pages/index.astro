@@ -3,14 +3,14 @@ import { basics } from '@cv';
 import Layout from '../layouts/Layout.astro';
 import About from '@/components/sections/About.astro';
 import Projects from '@/components/sections/Projects.astro';
-import Experiens from '@/components/sections/Experiens.astro';
+import Experience from '@/components/sections/Experience.astro';
 import Presentation from '@/components/Presentation.astro';
 const {name, label } = basics
 ---
 
 <Layout title= `${name} ${label}`>
-  <Presentation/>
-  <About id='about'/>
+  <Presentation id='about'/>
+  <About/>
   <Projects id='projects'/>
-  <Experiens id='experiens'/>
+  <Experience id='experience'/>
 </Layout>
