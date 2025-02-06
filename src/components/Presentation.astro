@@ -10,10 +10,13 @@ const SOCIAL_ICONS:Icons = {
   LinkedIn,
   GitHub
 };
-
+interface Props{
+  id:string
+}
+const {id} = Astro.props
 
 ---
-<section class=" lg:w-4/5 lg:size-4/5 mx-auto py-8 px-4 flex flex-col items-center lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-evenly  ">
+<section id={id} class=" lg:w-4/5 lg:h-[100vh] lg:size-4/5 m-auto py-8 px-4 flex flex-col items-center lg:mx-auto lg:flex lg:flex-row lg:items-center lg:justify-evenly">
   <img src="./darth_vader-removebg-preview.png" alt="" class="drop-shadow-[0_5px_35px_white]  mb-6 w-72 lg:w-2/5">
   <div class=" size-full px-6 flex flex-col justify-center gap-5 lg:w-3/5">
     <h1 class="text-purple-500 text-2xl font-bold hover:drop-shadow-[0_0_15px_rgb(168_85_347)]">Front-end Developer</h1>

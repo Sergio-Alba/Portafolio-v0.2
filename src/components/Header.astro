@@ -6,8 +6,10 @@ interface Props{
 }
 const {logo} = Astro.props;
 ---
-<div class=" w-5/6 mx-auto h-24 px-6 sticky top-2  z-10 flex justify-between lg:justify-around items-center backdrop-blur-2xl">
-  <a href="#" class=" text-3xl font-bold bg-[length:200%] bg-gradient-to-r from-purple-400 via-cyan-300 to-purple-400 animate-bg_slow text-transparent bg-clip-text md:text-4 ">
+<div class=" w-5/6 mx-auto h-24 px-6 fixed top-2  z-10 flex justify-between lg:justify-around items-center backdrop-blur-2xl">
+  <a href="#" class=" text-3xl font-bold bg-[length:200%] bg-gradient-to-r 
+                    dark:from-white dark:via-cyan-400 dark:to-white 
+                    from-black via-cyan-300  to-black animate-bg_slow text-transparent bg-clip-text md:text-4 ">
     {logo}
   </a>
   <Hamburger/>
