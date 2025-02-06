@@ -8,13 +8,13 @@ interface Props{
 }
 const {id} = Astro.props
 ---
-<section class="h-screen py-48" id={id}>
+<section class="h-min lg:w-3/6 mx-auto " id={id}>
   <Titles url="projects" title="Proyecto">
       <Briefcase Class="text-sky-500 size-7"/>
-  </Titles> 
+  </Titles>
   <div class="py-8 flex flex-wrap justify-center items-center gap-4">
     {
-      projects.slice(0,3).map(({name, description,url,image})=>{
+      projects.map(({name, description,url,image})=>{
         return(
           <Card title={name} description={description} url={url} image={image} />
         )

@@ -251,6 +251,7 @@
       "url": "https://codember.dev"
     },
     {
+      "image":"/kail.jpg",
       "name": "codi.link",
       "isActive": true,
       "description": "Playground de código HTML, CSS y JavaScript para compartir",
@@ -259,6 +260,7 @@
       "github": "https://github.com/midudev/codi.link"
     },
     {
+      "image":"/kail.jpg",
       "name": "Pruebas Técnicas",
       "isActive": true,
       "description": "Lista de pruebas técnicas de empresas para practicar programación",
@@ -267,6 +269,7 @@
       "github": "https://github.com/midudev/pruebas-tecnicas"
     },
     {
+      "image":"/kail.jpg",
       "name": "miduConf",
       "description": "Conferencia de programación en streaming para la comunidad hispanohablante con charlas top",
       "highlights": ["+15k tickets repartidos", "+50k espectadores en directo"],
