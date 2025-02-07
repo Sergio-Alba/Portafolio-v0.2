@@ -5,27 +5,28 @@ import Skills from "@/components/Skills.astro"
 import Soft_Skills from "@/components/Soft_Skills.astro";
 import Code from "@/icons/code.astro";
 ---
-<div class="h-max gap-4 w-4/5 mx-auto " >
-  <Titles url="Habilidades" title="Skills">
-    <Code class="text-purple-500 size-7"/>
-  </Titles>
-  <!-- <section class="px-2   backdrop-blur-[2px]  shadow shadow-white  rounded-md col-span-4 lg:col-span-2 lg:row-span-2 " >
-    <Titles url="about" title="Sobre mí">
-      <AboutIcon Class=" text-sky-500 size-7" />
-    </Titles>
-    <p class=" font-extralight   text-ms my-4">
+<div class="h-max pt-32 flex flex-col gap-4 w-11/12 mx-auto 
+            lg:w-4/6 lg:mx-auto lg:gap-12" >
+    <section class="px-2 " >
+      <Titles url="about" title="Sobre mí">
+        <AboutIcon Class=" text-sky-500 size-8" />
+      </Titles>
+      <p class="my-4 text-gray-600 dark:text-gray-300">
       ¡Hola! Soy Sergio, un apasionado entusiasta de la tecnología y el  desarrollo web. Aunque no tengo experiencia laboral formal, he dedicado mi tiempo a trabajar en emocionantes proyectos personales que me han permitido adquirir habilidades sólidas en el mundo de la tecnología. Me considero un autodidacta y me encanta aprender nuevas habilidades por mi cuenta. Mi enfoque principal ha sido el desarrollo web y la creación de aplicaciones web interactivas. Mi objetivo es seguir creciendo como  desarrollador y aprender nuevas tecnologías.
     </p>
-  </section> -->
-  <section class="  backdrop-blur-sm ">
-    <Skills/>
   </section>
-  <!-- <section class="px-2 bg-white/5  backdrop-blur-sm shadow-sm rounded-md col-span-4 lg:col-span-2">
+  <section class="px-2">
+    <Titles url="Habilidades" title="Skills"/>
+    <div class="slider">
+      <Skills/>
+    </div>
+  </section>
+  <section class="px-2 text-gray-600 dark:text-gray-300">
     <Soft_Skills/>
-  </section> -->
+  </section>
 </div> 
 <style>
-  section {
+  .slider {
     mask:linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
   }
 </style>

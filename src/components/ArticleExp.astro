@@ -7,11 +7,11 @@ interface Props{
 }
 const {name,date,summary,company} = Astro.props;
 ---
-<article class="w-5/6  py-8  border-l-2 border-indigo-900  grid grid-cols-10 gap-y-2  relative -z-0">
-  <span class="absolute h-6 w-6 block bg-yellow-400 -left-3 top-12 rounded-2xl auto-cols-min "></span>
-  <h1 class=" col-start-2 col-span-3 text-yellow-500 text-2xl font-bold ">{name}</h1>
-  <h2 class="col-start-2 col-span-6 dark:text-white font-light ">{company}</h2>
-  <h3 class=" col-start-2 col-span-2 text-gray-400 text-xs font-extralight ">{date}</h3>
-  <p class="col-start-2 col-span-8 text-ms font-extralight  ">{summary}</p>
+<article class="w-full py-8  border-l-2 border-indigo-900  grid grid-cols-10 lg:grid-cols-10 gap-y-2  relative -z-0">
+  <span class="absolute h-6 w-6 block bg-emerald-300 -left-3 top-12 rounded-2xl auto-cols-min "></span>
+  <h1 class="col-start-2 col-span-9 text-emerald-500 italic text-2xl font-bold ">{name}</h1>
+  <h2 class="col-start-2 col-span-9 dark:text-gray-600 italic font-light ">{company}</h2>
+  <h3 class="col-start-2 col-span-4 text-gray-400 italic text-xs font-extralight ">{date}</h3>
+  <p class="col-start-2 col-span-9  text-gray-700 dark:text-gray-300 ">{summary}</p>
 
 </article>

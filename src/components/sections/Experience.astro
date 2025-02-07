@@ -9,11 +9,11 @@ interface Props{
 const {id} = Astro.props
 
 ---
-<section class="z-0 h-max w-3/6 m-auto" id={id} >
+<section class="z-0 h-max w-11/12 px-2 py-24 m-auto lg:w-4/6 lg:mx-auto" id={id} >
   <Titles url="experiencia" title="Experiencia">
-    <File Class="text-purple-500 size-7"/>
+    <File Class="text-cyan-500 size-8"/>
   </Titles>
-  <div class="w-full  my-6 flex flex-col ">
+  <div class="w-full my-6 flex flex-col lg:w-4/6 lg:mx-auto">
     {
       work.map(({name,position,url,endDate,summary,highlights})=>{
         return(

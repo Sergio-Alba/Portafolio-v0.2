@@ -5,6 +5,7 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	darkMode: ['class'],
 	theme: {
+		
 		extend: {
 			keyframes:{
 				infiniteScroll: {
@@ -13,7 +14,9 @@ export default {
 				}
 			},
 			fontFamily:{
-				jetBrains:["JetBrains Mono", "monospace"]
+				jetBrains:["JetBrains Mono", "serif"],
+				protestRiot:["Protest Riot", "serif"]
+
 			},
 			animation:{
 				bg_slow:'bg 4s linear infinite',
