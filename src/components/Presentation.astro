@@ -1,54 +1,74 @@
 ---
 import { basics } from "@cv";
-import type {Icons} from "@/img";
+import type { Icons } from "@/img";
 import Download from "@/icons/download.astro";
 import LinkedIn from "@/icons/linkedin.astro";
 import GitHub from "@/icons/skills/github.astro";
+import React from "@/icons/skills/react.astro";
+import Typescript from "@/icons/skills/typescript.astro";
+import Css from "@/icons/skills/css.astro";
+import HeroIcons from "./HeroIcons.astro";
 
-const {profiles} = basics;
-const SOCIAL_ICONS:Icons = {
+const { profiles } = basics;
+const SOCIAL_ICONS: Icons = {
   LinkedIn,
-  GitHub
+  GitHub,
 };
-interface Props{
-  id:string
+interface Props {
+  id: string;
 }
-const {id} = Astro.props
-
+const { id } = Astro.props;
 ---
-<section id={id} class="w-full h-max pt-36 flex flex-col items-center justify-center italic gap-8
-                        md:w-5/6 lg:h-[100vh] md:pt-24 lg:pt-0 md:m-auto xl:px-16 md:mx-auto lg:flex md:flex-row md:items-center md:justify-between">
-  <img 
-    src="./darth_vader-removebg-preview.png" 
-    alt="" 
-    class="drop-shadow-[0_5px_35px_white] w-10/12 
-           md:w-3/6
-           lg:mb-6 lg:w-2/5"
+
+<section
+  id={id}
+  class="w-full pt-36 flex flex-col items-center justify-center italic gap-8
+                        md:w-5/6 lg:min-h-screen md:pt-24 lg:pt-0 md:m-auto xl:px-16 md:mx-auto lg:flex md:flex-row md:items-center md:justify-between"
+>
+  <div class="w-10/12 md:w-3/6 relative lg:mb-6 lg:w-2/5">
+    <img
+      src="./darth_vader-removebg-preview.png"
+      alt=""
+      class="w-full drop-shadow-[0_0px_10px_white]"
+    />
+    <HeroIcons title="TypeScript" position="top-32 left-0" >
+      <Typescript class="w-16 drop-shadow-[0_0_10px_#004680] hover:drop-shadow-[0_0_20px_#004680]" />
+    </HeroIcons>
+    <HeroIcons title="React" position="bottom-0 left-52">
+      <React class="w-16 drop-shadow-[0_0_10px_teal] hover:drop-shadow-[0_0_20px_teal]" />
+    </HeroIcons>
+    <HeroIcons title="Css" position="top-32 right-0" >
+      <Css class="w-16 drop-shadow-[0_0_10px_#510080] hover:drop-shadow-[0_0_20px_#510080]" />
+    </HeroIcons>
+  </div>
+  <div
+    class="w-full flex flex-col justify-center items-center gap-3 xl:px-12
+              md:w-4/6 md:items-start md:gap-5 lg:w-3/5"
   >
-  <div class="w-full flex flex-col justify-center items-center gap-3 xl:px-12
-              md:w-4/6 md:items-start md:gap-5 lg:w-3/5">
-    <h2 
+    <h2
       class="text-lg font-semibold px-2 text-sky-600 hover:drop-shadow-[0_0_15px_rgb(2_132_199)]
              lg:text-2xl"
     >
       Bienvenido a mi portafolio
     </h2>
-    <h1 
+    <h1
       class="text-5xl font-extrabold lg:text-7xl xl:text-8xl font-jetBrains italic"
     >
       Sergio Alba
     </h1>
     <h2 class="lg:text-2xl px-2 font-bold">
-      soy un 
-      <span class=" text-purple-500 hover:drop-shadow-[0_0_15px_rgb(168_85_347)]">
+      soy un
+      <span
+        class="text-purple-500 hover:drop-shadow-[0_0_15px_rgb(168_85_347)]"
+      >
         Desarrollador Front-end
       </span>
-    </h1>
+    </h2>
     <section class="w-3/5 flex flex-col gap-6 items-center">
       <div class="w-4/6 flex justify-evenly items-center gap-3">
         {
           profiles.map(({ network, url, username }) => {
-            const Icon = SOCIAL_ICONS[network]
+            const Icon = SOCIAL_ICONS[network];
             return (
               <a
                 class={`${network} w-auto flex items-center text-black dark:text-white  gap-4 hover:scale-105`}
@@ -57,14 +77,22 @@ const {id} = Astro.props
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                  <Icon class={`${network=="LinkedIn" ?' hover:drop-shadow-[0_0_15px_#0A66C2]':'hover:drop-shadow-[0_0_15px_orange]'} size-10 lg:size-12`}/>
+                <Icon
+                  class={`${network == "LinkedIn" ? " hover:drop-shadow-[0_0_15px_#0A66C2]" : "hover:drop-shadow-[0_0_15px_orange]"} size-10 lg:size-12`}
+                />
               </a>
-            )
+            );
           })
-      }
+        }
       </div>
-      <a class="w-full xl:w-2/3 bg-gradient-to-r from-green-400/75 to-blue-500/75 hover:from-green-400 hover:to-blue-400 
-                hover:shadow-[0px_0px_20px_5px_#00000080] dark:hover:shadow-[0px_0px_20px_5px_#ffffff70] transition-all text-xl px-8 py-5 rounded-lg flex gap-2 justify-center  active:shadow-[inset_10px_10px_15px_-3px_#00020]  text-white lg:text-center md:px-2" href="../assets/formato.pdf" target="_blank" rel="noopener noreferrer" title="Descargar CV"><Download/> Descargar CV</a>
+      <a
+        class="w-full xl:w-2/3 bg-gradient-to-r from-green-400/75 to-blue-500/75 hover:from-green-400 hover:to-blue-400
+                hover:shadow-[0px_0px_20px_5px_#00000080] dark:hover:shadow-[0px_0px_20px_5px_#ffffff70] transition-all text-xl px-8 py-5 rounded-lg flex gap-2 justify-center active:shadow-[inset_10px_10px_15px_-3px_#00020] text-white lg:text-center md:px-2"
+        href="../assets/formato.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Descargar CV"><Download /> Descargar CV</a
+      >
     </section>
   </div>
 </section>
