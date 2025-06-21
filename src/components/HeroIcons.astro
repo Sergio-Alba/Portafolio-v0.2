@@ -1,0 +1,18 @@
+---
+interface Props {
+  title: string;
+  position: string;
+}
+const { title, position } = Astro.props;
+---
+
+<div
+  class=`h-24 w-24 gap-4 flex flex-col items-center justify-center absolute animate-tiritar group ${position}`
+>
+  <slot />
+  <span
+    class="hidden group-hover:inline-block absolute -bottom-6 before:absolute before:-inset-0.5 before:block before:-skew-y-3 before:bg-blue-500"
+  >
+    <span class="relative text-white italic">{title}</span>
+  </span>
+</div>
