@@ -11,16 +11,28 @@ export default {
 				infiniteScroll: {
 					"0%": { transform: "translateX(0)"},
 					"100%": { transform: "translateX(calc(-50% - 20px))"},
+				},
+				tiritar:{
+					"0%": {
+						transform: "translateY(0px)"
+					},
+					"50%": {
+						transform: "translateY(10px)"	
+					},
+					"100%": {
+						transform: "translateY(0px)"
+					}
 				}
 			},
 			fontFamily:{
-				jetBrains:["JetBrains Mono", "serif"],
+				jetBrains:["JetBrains Mono", "serif "],
 				protestRiot:["Protest Riot", "serif"]
 
 			},
 			animation:{
 				bg_slow:'bg 4s linear infinite',
-				infiniteScroll: "infinite-scroll 4s linear infinite"
+				infiniteScroll: "infinite-scroll 4s linear infinite",
+				tiritar: "tiritar 1.5s ease-in-out infinite"
 			},
 			backgroundImage:{
 				circles:"url('./src/icons/fondo-5.png')"
