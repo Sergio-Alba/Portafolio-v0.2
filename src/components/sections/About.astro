@@ -3,9 +3,12 @@ import Titles from "../Titles.astro"
 import AboutIcon from "@/icons/aboutIcon.astro"
 import Skills from "@/components/Skills.astro"
 import Soft_Skills from "@/components/Soft_Skills.astro";
-import Code from "@/icons/code.astro";
+interface Props {
+  id: string
+}
+const { id } = Astro.props
 ---
-<div class="h-max pt-32 flex flex-col gap-4 w-11/12 mx-auto 
+<div id={id} class="h-max pt-32 flex flex-col gap-4 w-11/12 mx-auto 
             lg:w-4/6 lg:mx-auto lg:gap-12" >
     <section class="px-2 " >
       <Titles url="about" title="Sobre mí">
