@@ -22,6 +22,22 @@ export default {
 					"100%": {
 						transform: "translateY(0px)"
 					}
+				},
+				rotate360Background: {
+					"0%": {
+						transform: "rotate(0deg)"
+					},
+					"100%": {
+					  transform: "rotate(360deg)"
+					}
+				},
+				rotate360Item: {
+					"0%": {
+						transform: "rotate(0deg)"
+					},
+					"100%": {
+					  transform: "rotate(-360deg)"
+					}
 				}
 			},
 			fontFamily:{
@@ -32,11 +48,14 @@ export default {
 			animation:{
 				bg_slow:'bg 4s linear infinite',
 				infiniteScroll: "infinite-scroll 4s linear infinite",
-				tiritar: "tiritar 1.5s ease-in-out infinite"
+				tiritar: "tiritar 1.5s ease-in-out infinite",
+				rotate360: "rotate360Background 8s linear infinite",
+				rotate360Item: "rotate360Item 8s linear infinite"
 			},
 			backgroundImage:{
 				circles:"url('./src/icons/fondo-5.png')"
 			},
+
 		},
 	},
 	plugins: [],
