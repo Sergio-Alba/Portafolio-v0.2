@@ -8,6 +8,7 @@ import React from "@/icons/skills/react.astro";
 import Typescript from "@/icons/skills/typescript.astro";
 import Css from "@/icons/skills/css.astro";
 import HeroIcons from "./HeroIcons.astro";
+import Html from "@/icons/skills/html.astro";
 
 const { profiles } = basics;
 const SOCIAL_ICONS: Icons = {
@@ -22,24 +23,34 @@ const { id } = Astro.props;
 
 <section
   id={id}
-  class="w-full pt-36 flex flex-col items-center justify-center italic gap-8
-                        md:w-5/6 lg:min-h-screen md:pt-24 lg:pt-0 md:m-auto xl:px-16 md:mx-auto lg:flex md:flex-row md:items-center md:justify-between"
+  class="w-screen pt-36 flex flex-col place-items-center italic gap-8
+         md:w-5/6 md:pt-24 md:m-auto md:mx-auto md:flex-row md:items-center md:justify-between lg:min-h-[48rem] lg:pt-0 lg:flex xl:px-16 overflow-hidden"
 >
-  <div class="w-10/12 md:w-3/6 relative lg:mb-6 lg:w-2/5">
-    <img
-      src="./darth_vader-removebg-preview.png"
-      alt=""
-      class="w-full drop-shadow-[0_0px_10px_white]"
-    />
-    <HeroIcons title="TypeScript" position="top-32 left-0" >
-      <Typescript class="w-16 drop-shadow-[0_0_10px_#004680] hover:drop-shadow-[0_0_20px_#004680]" />
-    </HeroIcons>
-    <HeroIcons title="React" position="bottom-0 left-52">
-      <React class="w-16 drop-shadow-[0_0_10px_teal] hover:drop-shadow-[0_0_20px_teal]" />
-    </HeroIcons>
-    <HeroIcons title="Css" position="top-32 right-0" >
-      <Css class="w-16 drop-shadow-[0_0_10px_#510080] hover:drop-shadow-[0_0_20px_#510080]" />
-    </HeroIcons>
+  <div class="w-full   mb-16  md:w-3/6 flex flex-col justify-center items-center relative lg:mb-6 lg:w-2/5 lg:h-[32rem]">
+    <div class="w-full lg:h-full  md:h-5/6 flex justify-center items-center">
+      <img
+        src="./darth_vader-removebg-preview.png"
+        alt=""
+        class="w-[75%]  drop-shadow-[0_0px_10px_white] hover:drop-shadow-[0_0px_20px_white]"
+      />
+    </div>
+    <div class="animate-rotate360 w-[90%] h-[90vw] md:w-full md:h-full absolute rounded-full">
+      <HeroIcons title="TypeScript" position="top-[30%] left-0" >
+        <Typescript class="w-16 h-16 object-contain drop-shadow-[0_0_10px_#004680] hover:drop-shadow-[0_0_20px_#004680]" />
+      </HeroIcons>
+      <HeroIcons title="CSS" position="bottom-8 left-[15%] " >
+        <Css class="w-16 h-16 object-contain drop-shadow-[0_0_10px_#510080] hover:drop-shadow-[0_0_20px_#510080]" />
+      </HeroIcons>
+      <HeroIcons title="GitHub" position="bottom-8 right-[15%]">
+        <GitHub class="w-16 drop-shadow-[0_0_10px_black] hover:drop-shadow-[0_0_20px_black]" />
+      </HeroIcons>
+      <HeroIcons title="React" position="top-[30%] right-0">
+        <React class="w-16 h-16 object-contain drop-shadow-[0_0_10px_teal] hover:drop-shadow-[0_0_20px_teal]" />
+      </HeroIcons>
+      <HeroIcons title="HTML" position="top-0 right-[35%]">
+        <Html class="w-16 h-16 object-contain drop-shadow-[0_0_10px_#ffa25ad7] hover:drop-shadow-[0_0_20px_#ffa25ad7]" />
+      </HeroIcons>
+    </div>
   </div>
   <div
     class="w-full flex flex-col justify-center items-center gap-3 xl:px-12
