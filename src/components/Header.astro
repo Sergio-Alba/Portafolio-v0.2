@@ -1,25 +1,28 @@
 ---
-import Hamburger from "@/components/Hamburger.astro"
+import Hamburger from "@/components/Hamburger.astro";
 
-interface Props{
-  logo:string,
+interface Props {
+  logo: string;
 }
-const {logo} = Astro.props;
+const { logo } = Astro.props;
 ---
-<div class="w-screen md:w-5/6 md:mx-auto h-24 px-6 fixed md:top-2  z-10 flex justify-between lg:justify-around items-center backdrop-blur-2xl md:sticky lg:mx-auto">
-  <a href="#" class=" text-3xl font-bold bg-[length:200%] bg-gradient-to-r 
-                    dark:from-white dark:via-cyan-400 dark:to-white 
-                    from-black via-cyan-300  to-black animate-bg_slow text-transparent bg-clip-text md:text-4 ">
+
+<div
+  class="w-screen md:w-5/6 md:mx-auto h-24 px-6 fixed md:top-2 z-10 flex justify-around lg:justify-around items-center backdrop-blur-2xl md:fixed "
+>
+  <a
+    href="#"
+    class="text-3xl font-bold bg-[length:200%] bg-gradient-to-r
+                    from-purple-600 via-cyan-600 to-purple-600 animate-bg_slow text-transparent bg-clip-text md:text-4"
+  >
     {logo}
   </a>
-  <Hamburger/>
+  <Hamburger />
 </div>
 <style is:global>
   @keyframes bg {
-    to{
+    to {
       background-position: 200% center;
     }
   }
 </style>
-
-
