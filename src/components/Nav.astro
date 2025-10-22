@@ -1,18 +1,28 @@
 ---
 import NavButton from "./NavButton.astro";
-import BtnTheme from "../components/BtnTheme.astro"
+import BtnTheme from "../components/BtnTheme.astro";
 
-interface Props{
-  estilos:string
+interface Props {
+  estilos: string;
 }
-const { estilos } = Astro.props
+const { estilos } = Astro.props;
 ---
 
-<nav  class=` ${estilos}  w-0 h-[35rem] overflow-hidden  md:overflow-visible px-6 absolute top-20 md:top-0 right-0  dark:bg-black/30  backdrop-blur-2xl md:backdrop-blur-none bg-gray-200/20 flex flex-col justify-center gap-6 rounded-md transition-[width] duration-700 ease-in-out md:max-h-40 md:relative md:flex-row md:h-max  md:w-max md:dark:bg-none md:bg-transparent md:dark:bg-transparent`> 
-  <NavButton url="/#inicio" title="Inicio"/>
-  <NavButton url="/#about" title="Sobre mí"/>
-  <NavButton url="/#experience" title="Experiencia"/>
-  <NavButton url="/#projects" title="Proyectos"/>
-  <NavButton url="/#contact" title="Contacto"/>
-  <BtnTheme/>
-</nav>   
+<nav
+  class=` ${estilos}  w-0 h-[30rem]
+    overflow-hidden md:overflow-visible absolute top-20 md:top-0 right-0  
+    border border-white/20 
+    flex flex-col justify-center gap-4 rounded-2xl 
+    transition-[width,opacity] duration-700 ease-in-out 
+    opacity-0 peer-checked/hamb:opacity-100
+    md:opacity-100 md:w-max md:h-max md:relative md:flex-row 
+    md:dark:bg-transparent md:bg-transparent md:border-none md:shadow-none bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/40 shadow-[0_3px_10px_rgb(0,0,0,0.6)] backdrop-blur-md`
+>
+  <NavButton url="/#inicio" title="Inicio" />
+  <NavButton url="/#about" title="Sobre mí" />
+  <NavButton url="/#experience" title="Experiencia" />
+  <NavButton url="/#projects" title="Proyectos" />
+  <NavButton url="/#contact" title="Contacto" />
+  <BtnTheme />
+</nav>
+
