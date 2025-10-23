@@ -65,6 +65,7 @@ interface Volunteer {
 interface Skills {
   name: string
   level: string
+  color: string
   keywords: Array<string>
 }
 

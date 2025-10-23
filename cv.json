@@ -87,16 +87,19 @@
     {
       "name": "Html",
       "level": "Master",
+      "color": "#e85827",
       "keywords": ["Desarrollo Web", "Frontend"]
     },
     {
       "name": "Css",
       "level": "Master",
+      "color": "#663399",
       "keywords": ["Desarrollo Web", "Frontend", "Diseño Responsive"]
     },
     {
       "name": "Sass",
       "level": "Avanzado",
+      "color": "#cf649a",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -107,6 +110,7 @@
     {
       "name": "Tailwind",
       "level": "Avanzado",
+      "color": "#38bdf8",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -117,11 +121,13 @@
     {
       "name": "JavaScript",
       "level": "Master",
+      "color": "#f0db4f",
       "keywords": ["Desarrollo Web", "Frontend", "Backend", "Fullstack"]
     },
     {
       "name": "TypeScript",
       "level": "Avanzado",
+      "color": "#3178c6",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -132,11 +138,13 @@
     {
       "name": "React",
       "level": "Avanzado",
+      "color": "#58c4dc",
       "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
     },
     {
       "name": "Next",
       "level": "Avanzado",
+      "color": "#ffffff",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -148,41 +156,49 @@
     {
       "name": "Astro",
       "level": "Avanzado",
+      "color": "#ff5d01",
       "keywords": ["Desarrollo Web", "Frontend", "JavaScript Library", "UI"]
     },
     {
       "name": "Node",
       "level": "Avanzado",
+      "color": "#59a745",
       "keywords": ["Desarrollo Web", "Backend", "JavaScript", "Servidor"]
     },
     {
       "name": "Java",
       "level": "Medium",
+      "color": "#4c7693",
       "keywords": ["Desarrollo Web", "Backend", "Java", "Servidor"]
     },
     {
       "name": "Spring",
       "level": "Medium",
+      "color": "#68bd45",
       "keywords": ["Desarrollo Web", "Backend", "Java", "Servidor"]
     },
     {
       "name": "Sql",
       "level": "Avanzado",
+      "color": "#00546b",
       "keywords": ["Data base", "Backend", "Java", "Servidor"]
     },
     {
       "name": "PostgresQl",
       "level": "Avanzado",
+      "color": "#336791",
       "keywords": ["Data base", "Backend", "JavaScript", "Servidor"]
     },
     {
       "name": "Git",
       "level": "Avanzado",
+      "color": "#de4c36",
       "keywords": ["Control de Versiones", "Colaboración", "Código Fuente"]
     },
     {
       "name": "GitHub",
       "level": "Avanzado",
+      "color": "#ffffff",
       "keywords": [
         "Control de Versiones",
         "Colaboración",
