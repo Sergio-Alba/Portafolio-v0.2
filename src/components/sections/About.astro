@@ -3,34 +3,26 @@ import Titles from "../Titles.astro"
 import AboutIcon from "@/icons/aboutIcon.astro"
 import Skills from "@/components/Skills.astro"
 import Soft_Skills from "@/components/Soft_Skills.astro";
+import TechGrid from "../TechGrid.astro";
 interface Props {
   id: string
 }
 const { id } = Astro.props
 ---
-<div id={id} class="h-max pt-32 flex flex-col gap-4 w-11/12 mx-auto 
-            lg:w-4/6 lg:mx-auto lg:gap-12" >
+<section id={id} class="flex flex-col w-11/12 gap-4 pt-32 mx-auto h-max lg:w-5/6 lg:h-screen lg:mx-auto lg:gap-12" >
     <section class="px-2 " >
       <Titles url="about" title="Sobre mí">
-        <AboutIcon Class=" text-sky-500 size-8" />
+        <AboutIcon Class=" text-sky-500 size-[1em]" />
       </Titles>
-      <p class="my-4 text-gray-600 dark:text-gray-300">
+      <p class="my-4 text-sm text-gray-600 dark:text-gray-300">
       ¡Hola! Soy Sergio, un apasionado entusiasta de la tecnología y el  desarrollo web. Aunque no tengo experiencia laboral formal, he dedicado mi tiempo a trabajar en emocionantes proyectos personales que me han permitido adquirir habilidades sólidas en el mundo de la tecnología. Me considero un autodidacta y me encanta aprender nuevas habilidades por mi cuenta. Mi enfoque principal ha sido el desarrollo web y la creación de aplicaciones web interactivas. Mi objetivo es seguir creciendo como  desarrollador y aprender nuevas tecnologías.
     </p>
   </section>
-  <section class="px-2">
-    <Titles url="Habilidades" title="Skills"/>
-    <div class="slider">
-      <Skills/>
-    </div>
+  <section class="">
+    <TechGrid/>
   </section>
   <section class="px-2 text-gray-600 dark:text-gray-300">
     <Soft_Skills/>
   </section>
-</div> 
-<style>
-  .slider {
-    mask:linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
-  }
-</style>
+</> 
   
