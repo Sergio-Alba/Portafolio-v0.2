@@ -1,25 +1,92 @@
 ---
-import { work  } from "@cv";
-import File from "@/icons/file.astro";
-import Titles from "../Titles.astro";
-import ArticleExp from "../ArticleExp.astro"
-interface Props{
-  id:string,
+interface Props {
+  id: string;
 }
-const {id} = Astro.props
-
+const { id } = Astro.props;
+const handleSubmit = (e: Event) => {
+  e.preventDefault();
+  alert("¡Gracias por tu mensaje! 🚀");
+};
 ---
-<section class="z-0 h-max w-11/12 px-2 py-24 m-auto lg:w-4/6 lg:mx-auto" id={id} >
-  <Titles url="experiencia" title="Experiencia">
-    <File Class="text-cyan-500 size-8"/>
-  </Titles>
-  <div class="w-full my-6 flex flex-col lg:w-4/6 lg:mx-auto">
-    {
-      work.map(({name,position,url,endDate,summary,highlights})=>{
-        return(
-          <ArticleExp name={name} company={highlights} date={endDate} summary={summary} />
-        )
-      })
-    }
-  </div>
+
+<section
+  id={id}
+  class="flex flex-col items-center justify-center w-full px-6 py-20 "
+>
+  <h2
+    class="mb-6 text-3xl font-bold text-center text-gray-800 md:text-4xl dark:text-white"
+  >
+    Contáctame
+  </h2>
+  <p class="max-w-lg mb-10 text-center text-gray-600 dark:text-gray-300">
+    Si tienes algún proyecto, idea o colaboración en mente, no dudes en
+    escribirme. ¡Responderé lo antes posible!
+  </p>
+
+  <form
+    class="w-full max-w-md p-8 space-y-6 transition-all duration-500 border border-gray-200 shadow-xl bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg rounded-2xl dark:border-gray-700"
+    on:submit={handleSubmit}
+  >
+    <!-- Nombre -->
+    <div class="flex flex-col">
+      <label
+        for="name"
+        class="mb-1 text-sm font-semibold text-gray-700 dark:text-gray-300"
+      >
+        Nombre
+      </label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        required
+        placeholder="Tu nombre"
+        class="p-3 transition-all bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:focus:ring-cyan-400"
+      />
+    </div>
+
+    <!-- Email -->
+    <div class="flex flex-col">
+      <label
+        for="email"
+        class="mb-1 text-sm font-semibold text-gray-700 dark:text-gray-300"
+      >
+        Correo electrónico
+      </label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        placeholder="ejemplo@correo.com"
+        class="p-3 transition-all bg-gray-100 border border-gray-300 rounded-lg dark:bg-gray-800 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:focus:ring-cyan-400"
+      />
+    </div>
+
+    <!-- Mensaje -->
+    <div class="flex flex-col">
+      <label
+        for="message"
+        class="mb-1 text-sm font-semibold text-gray-700 dark:text-gray-300"
+      >
+        Mensaje
+      </label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        required
+        placeholder="Escribe tu mensaje aquí..."
+        class="p-3 transition-all bg-gray-100 border border-gray-300 rounded-lg resize-none dark:bg-gray-800 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 dark:focus:ring-cyan-400"
+      ></textarea>
+    </div>
+
+    <!-- Botón -->
+    <button
+      type="submit"
+      class="w-full py-3 font-semibold text-white transition-all duration-300 ease-in-out rounded-lg shadow-md bg-cyan-500 hover:bg-cyan-600 hover:shadow-cyan-400/30"
+    >
+      Enviar mensaje
+    </button>
+  </form>
 </section>
