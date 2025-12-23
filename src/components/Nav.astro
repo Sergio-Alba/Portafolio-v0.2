@@ -9,14 +9,14 @@ const { estilos } = Astro.props;
 ---
 
 <nav
-  class=` ${estilos}  w-0 h-[30rem]
-    overflow-hidden md:overflow-visible absolute top-20 md:top-0 right-0  
-    border border-white/20 
-    flex flex-col justify-center gap-4 rounded-2xl 
-    transition-[width,opacity] duration-700 ease-in-out 
-    opacity-0 peer-checked/hamb:opacity-100
-    md:opacity-100 md:w-max md:h-max md:relative md:flex-row 
-    md:dark:bg-transparent md:bg-transparent md:border-none md:shadow-none bg-white/90 dark:bg-gray-900/90 dark:border-gray-500/40 shadow-[0_3px_10px_rgb(0,0,0,0.6)] backdrop-blur-md`
+  class=`${estilos}
+    w-80 min-h-full absolute top-20 md:top-0 right-0 py-20 md:py-0
+    flex flex-col gap-4 translate-x-0 opacity-100 
+    transition-[transform, opacity]  duration-800
+    md:opacity-100 md:w-max md:h-min md:relative md:flex-row md:gap-0
+    md:dark:bg-transparent md:bg-transparent  md:shadow-none
+    md:overflow-visible bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg md:backdrop-blur-none 
+ `
 >
   <NavButton url="/#inicio" title="Inicio" />
   <NavButton url="/#about" title="Sobre mí" />
@@ -25,4 +25,3 @@ const { estilos } = Astro.props;
   <NavButton url="/#contact" title="Contacto" />
   <BtnTheme />
 </nav>
-

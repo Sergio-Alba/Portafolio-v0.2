@@ -53,7 +53,6 @@ export default {
 			backgroundImage:{
 				circles:"url('./src/icons/fondo-5.png')"
 			},
-
 		},
 	},
 	plugins: [],

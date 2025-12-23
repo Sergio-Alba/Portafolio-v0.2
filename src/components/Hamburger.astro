@@ -1,19 +1,23 @@
 ---
 import Nav from "./Nav.astro";
-
-
 ---
-<div class="z-50 rounded-md appearance-none bg-gray-400/30 md:bg-transparent right-4 ">
-  <input 
-    class="hidden peer/hamb " 
-    type="checkbox" 
-    id="hamb">
-  <label for="hamb" class="flex flex-col items-center w-14 h-14 md:bg-transparent md:hidden justify-evenly">
-    <span class="w-8 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"></span>
-    <span class="w-12 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"></span>
-    <span class="w-8 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"></span>
-  </label>
-  <Nav estilos="peer-checked/hamb:w-[15rem] peer-checked/hamb:opacity-100"/> 
 
-</div>  
-  
+<div
+  class="z-50 mr-4 md:mr-0 rounded-md bg-gray-400/20 md:bg-transparent right-4"
+>
+  <input class="hidden peer/hamb" type="checkbox" id="hamb" />
+  <label
+    for="hamb"
+    class="flex flex-col items-center w-14 h-14 md:bg-transparent md:hidden justify-evenly"
+  >
+    <span class="w-8 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"
+    ></span>
+    <span class="w-12 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"
+    ></span>
+    <span class="w-8 h-[4px] bg-cyan-500 dark:bg-white rounded-sm inline-block"
+    ></span>
+  </label>
+  <Nav
+    estilos="peer-checked/hamb:translate-x-full peer-checked/hamb:opacity-0 md:peer-checked/hamb:translate-x-0 md:peer-checked/hamb:opacity-100 "
+  />
+</div>
