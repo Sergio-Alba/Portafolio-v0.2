@@ -144,7 +144,7 @@
     {
       "name": "Next",
       "level": "Avanzado",
-      "color": "#ffffff",
+      "color": "#b9b9b9",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -198,7 +198,7 @@
     {
       "name": "GitHub",
       "level": "Avanzado",
-      "color": "#ffffff",
+      "color": "#b9b9b9",
       "keywords": [
         "Control de Versiones",
         "Colaboración",
